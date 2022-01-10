@@ -16,8 +16,4 @@ async def on_message(message):
         code = bot.generate_code()
         await message.channel.send(str(code))
 
-    if message.content == '!wujku daj jakiegoś steala':
-        await message.channel.send('Sprawdź StealAlert! Yeezy NA ZALANDO????!!!!! https://www.facebook.com/stealalert')
-
-
 client.run(TOKEN)
