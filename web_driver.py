@@ -15,7 +15,7 @@ class WebDriver:
     def get_driver(self):
         if self.driver is None:
             options = Options()
-            options.headless = True  # set True to use Chrome in headless mode
+            options.headless = False  # set True to use Chrome in headless mode
             self.driver = webdriver.Chrome(options=options, executable_path=self.path)
         return self.driver
 

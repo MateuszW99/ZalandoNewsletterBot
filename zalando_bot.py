@@ -48,7 +48,7 @@ class ZalandoBot:
             bot_driver.switch_to.window(bot_driver.window_handles[0])
 
             ## open email with confirmation btn
-            email_with_confirmation = web_driver.try_get_element(7, By.XPATH, CONST.EMAIL_SUBSCRIBE_BUTTON_XPATH)
+            email_with_confirmation = web_driver.try_get_element(10, By.XPATH, CONST.EMAIL_SUBSCRIBE_BUTTON_XPATH)
             email_with_confirmation.click()
 
             # go to email generator
@@ -56,11 +56,11 @@ class ZalandoBot:
             bot_driver.refresh()
 
             ## open email with code
-            email = web_driver.try_get_element(7, By.XPATH, CONST.EMAIL_WITH_CODE_XPATH)
+            email = web_driver.try_get_element(10, By.XPATH, CONST.EMAIL_WITH_CODE_XPATH)
             email.click()
 
             ## get code from email
-            code = web_driver.try_get_element(7, By.XPATH, CONST.EMAIL_CODE_XPATH)
+            code = web_driver.try_get_element(2, By.XPATH, CONST.EMAIL_CODE_XPATH)
             return code.text
 
         except Exception as e:
